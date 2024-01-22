@@ -60,9 +60,10 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    
+    rotateZ(frameCount * 0.01);
+    rotateX(frameCount * 0.01);
+    rotateY(frameCount * 0.01);
     translate(0, 0, -10);
-    
     normalMaterial();
     box(80);
    
