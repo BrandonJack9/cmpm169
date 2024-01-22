@@ -26,7 +26,7 @@ class MyClass {
 }
 
 function  preload(){
-    shadow = loadModel('assets/shadow.obj', true);
+    shadow = loadModel('shadow.obj', true);
 }
 
 // setup() function is called once when the program starts
