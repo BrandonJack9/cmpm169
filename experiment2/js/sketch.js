@@ -63,7 +63,7 @@ function draw() {
     
     //translate(0, 0, -600);
     
-    fill(500, 0, 500);
+    normalMaterial();
     box(80);
    
     
