@@ -24,16 +24,12 @@ class MyClass {
         // code to run when method is called
     }
 }
-let shadow;
 
-function  preload(){
-    shadow = loadModel('assets/shadow.obj', true);
-}
 
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
-    /*canvasContainer = $("#canvas-container");
+    canvasContainer = $("#canvas-container");
     let canvas = createCanvas(canvasContainer.width(), canvasContainer.height(), WEBGL);
     canvas.parent("canvas-container");
     // resize canvas is the page is resized
@@ -45,15 +41,15 @@ function setup() {
     myInstance = new MyClass(VALUE1, VALUE2);
 
     var centerHorz = windowWidth / 2;
-    var centerVert = windowHeight / 2;*/
-    createCanvas(710, 400, WEBGL);
+    var centerVert = windowHeight / 2;
+    
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
        
     // call a method on the instance
-    /*myInstance.myMethod();
+    myInstance.myMethod();
 
     // Put drawings here
     
@@ -83,13 +79,8 @@ function draw() {
         }
         pop();
         }
-    }*/
-    background(200);
-    scale(0.4); // Scaled to make model fit into canvas
-    rotateX(frameCount * 0.01);
-    rotateY(frameCount * 0.01);
-    normalMaterial(); // For effect
-    model(shadow);
+    }
+    
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
