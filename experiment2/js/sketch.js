@@ -63,8 +63,8 @@ function draw() {
     orbitControl();
 
     normalMaterial();
-    model(shadow);
     translate(0, 0, -600);
+    model(shadow);
     for (let i = 0; i <= 12; i++) {
         for (let j = 0; j <= 12; j++) {
         push();
