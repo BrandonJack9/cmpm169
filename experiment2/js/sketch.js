@@ -24,6 +24,7 @@ class MyClass {
         // code to run when method is called
     }
 }
+let shadow;
 
 function  preload(){
     shadow = loadModel('shadow.obj', true);
