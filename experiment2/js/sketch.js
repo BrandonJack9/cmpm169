@@ -60,7 +60,7 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    normalMaterial();
+    
     translate(0, 0, -600);
     texture(img);
     box(80);
