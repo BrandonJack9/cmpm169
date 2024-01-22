@@ -62,10 +62,8 @@ function draw() {
 
     
     //translate(0, 0, -600);
-    rotateZ(frameCount * 0.01);
-    rotateX(frameCount * 0.01);
-    rotateY(frameCount * 0.01);
-    fill(500,0,500);
+    
+    fill(500, 0, 500);
     box(80);
    
     
