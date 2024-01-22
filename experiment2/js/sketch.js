@@ -28,8 +28,8 @@ class MyClass {
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
-    /*canvasContainer = $("#canvas-container");
-    let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+    canvasContainer = $("#canvas-container");
+    let canvas = createCanvas(canvasContainer.width(), canvasContainer.height(), WEBGL);
     canvas.parent("canvas-container");
     // resize canvas is the page is resized
     $(window).resize(function() {
@@ -40,18 +40,18 @@ function setup() {
     myInstance = new MyClass(VALUE1, VALUE2);
 
     var centerHorz = windowWidth / 2;
-    var centerVert = windowHeight / 2;*/
-    createCanvas(710, 400, WEBGL);
+    var centerVert = windowHeight / 2;
+    //createCanvas(710, 400, WEBGL);
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    /*background(220);    
+    //background(220);    
     // call a method on the instance
     myInstance.myMethod();
 
     // Put drawings here
-    var centerHorz = canvasContainer.width() / 2 - 125;
+    /*var centerHorz = canvasContainer.width() / 2 - 125;
     var centerVert = canvasContainer.height() / 2 - 125;
     fill(0, 31, 81);
     noStroke();
