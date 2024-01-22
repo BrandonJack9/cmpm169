@@ -25,7 +25,7 @@ class MyClass {
     }
 }
 
-
+let img;
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
@@ -39,6 +39,7 @@ function setup() {
     });
     // create an instance of the class
     myInstance = new MyClass(VALUE1, VALUE2);
+    img = loadImage('assets/demonboyprofilepic.png');
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
@@ -61,6 +62,7 @@ function draw() {
 
     normalMaterial();
     translate(0, 0, -600);
+    texture(img);
     box(80);
    
     
