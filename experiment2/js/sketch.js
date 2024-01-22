@@ -61,7 +61,7 @@ function draw() {
     orbitControl();
 
     
-    //translate(0, 0, -600);
+    translate(0, 0, -10);
     
     normalMaterial();
     box(80);
