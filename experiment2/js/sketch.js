@@ -25,6 +25,10 @@ class MyClass {
     }
 }
 
+function  preload(){
+    shadow = loadModel('assets/shadow.obj', true);
+}
+
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
@@ -46,20 +50,12 @@ function setup() {
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    //background(220);    
+       
     // call a method on the instance
     myInstance.myMethod();
 
     // Put drawings here
-    /*var centerHorz = canvasContainer.width() / 2 - 125;
-    var centerVert = canvasContainer.height() / 2 - 125;
-    fill(0, 31, 81);
-    noStroke();
-    rect(centerHorz, centerVert, 250, 250);
-    fill(255);
-    textStyle(BOLD);
-    textSize(140);
-    text("p5*", centerHorz + 10, centerVert + 200);*/
+    
     background(250);
     let radius = width * 1.5;
 
@@ -67,6 +63,7 @@ function draw() {
     orbitControl();
 
     normalMaterial();
+    model(shadow);
     translate(0, 0, -600);
     for (let i = 0; i <= 12; i++) {
         for (let j = 0; j <= 12; j++) {
