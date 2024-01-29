@@ -25,6 +25,11 @@ class MyClass {
     }
 }
 'use strict';
+var maxCount = 1000; // max count of the cirlces
+var currentCount = 1;
+var x = [];
+var y = [];
+var r = [];
 
 // setup() function is called once when the program starts
 function setup() {
