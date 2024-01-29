@@ -34,7 +34,7 @@ var r = [];
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
-    canvasContainer = $("#canvas-container");
+    /*canvasContainer = $("#canvas-container");
     let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
     canvas.parent("canvas-container");
     // resize canvas is the page is resized
@@ -46,8 +46,8 @@ function setup() {
     myInstance = new MyClass(VALUE1, VALUE2);
 
     var centerHorz = windowWidth / 2;
-    var centerVert = windowHeight / 2;
-    //createCanvas(800, 800);
+    var centerVert = windowHeight / 2;*/
+    createCanvas(800, 800);
     strokeWeight(0.5);
     x[0] = width / 2;
     y[0] = height / 2;
@@ -56,10 +56,10 @@ function setup() {
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-        
+    background(250);    
     // call a method on the instance
     myInstance.myMethod();
-    background(250);
+
     // Put drawings here
     
 
