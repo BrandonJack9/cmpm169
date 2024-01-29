@@ -24,6 +24,7 @@ class MyClass {
         // code to run when method is called
     }
 }
+'use strict';
 
 // setup() function is called once when the program starts
 function setup() {
@@ -41,24 +42,61 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
+    strokeWeight(0.5);
+    x[0] = width / 2;
+    y[0] = height / 2;
+    r[0] = 10;
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    background(220);    
+    background(250);    
     // call a method on the instance
     myInstance.myMethod();
 
     // Put drawings here
-    var centerHorz = canvasContainer.width() / 2 - 125;
-    var centerVert = canvasContainer.height() / 2 - 125;
-    fill(234, 31, 81);
-    noStroke();
-    rect(centerHorz, centerVert, 250, 250);
-    fill(255);
-    textStyle(BOLD);
-    textSize(140);
-    text("p5*", centerHorz + 10, centerVert + 200);
+    
+
+  var newR = random(10, 30);
+  var newX = random(newR, width - newR);
+  var newY = random(newR, height - newR);
+  var colorR = random(1, 500);
+  var colorG = random(1, 500);
+  var colorB = random(1, 500);
+  
+
+  var closestDist = Number.MAX_VALUE;
+  var closestIndex = 0;
+  // which circle is the closest?
+  for (var i = 0; i < currentCount; i++) {
+    var newDist = dist(newX, newY, x[i], y[i]);
+    if (newDist < closestDist) {
+      closestDist = newDist;
+      closestIndex = i;
+    }
+  }
+
+  // show original position of the circle and a line to the new position
+  fill(colorR, colorG, colorB);
+  ellipse(newX, newY, newR * 2, newR * 2);
+  //line(newX, newY, x[closestIndex], y[closestIndex]);
+
+  // aline it to the closest circle outline
+  var angle = atan2(newY - y[closestIndex], newX - x[closestIndex]);
+
+  x[currentCount] = x[closestIndex] + cos(angle) * (r[closestIndex] + newR);
+  y[currentCount] = y[closestIndex] + sin(angle) * (r[closestIndex] + newR);
+  r[currentCount] = newR;
+  currentCount++;
+
+  // draw them
+  for (var i = 0; i < currentCount; i++) {
+    fill(colorR, colorG, colorB);
+    rotate(PI / 3.0);
+    ellipse(x[i], y[i], r[i] * 2, r[i] * 2);
+  }
+
+  if (currentCount >= maxCount) noLoop();
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
