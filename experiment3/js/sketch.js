@@ -55,7 +55,7 @@ function setup() {
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    background(250);    
+    //background(250);    
     // call a method on the instance
     myInstance.myMethod();
 
