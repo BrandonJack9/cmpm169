@@ -118,7 +118,7 @@ function draw() {
 };
 
 
-/*function mouseClicked() {
+function mouseClicked() {
   if (song.isPlaying()) {
     song.pause();
     noLoop();
@@ -126,6 +126,6 @@ function draw() {
     song.play();
     loop();
   }
-}*/
+}
 
   
