@@ -25,43 +25,56 @@ class MyClass {
     }
 }
 
+let song;
+let fft;
+
+function preload() {
+	//Music by ItsWatR from Pixabay
+  song = loadSound("Ever_Flowing.mp3");
+}
+
 // setup() function is called once when the program starts
 function setup() {
-    // place our canvas, making it fit our container
-    canvasContainer = $("#canvas-container");
-    let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
-    canvas.parent("canvas-container");
-    // resize canvas is the page is resized
-    $(window).resize(function() {
-        console.log("Resizing...");
-        resizeCanvas(canvasContainer.width(), canvasContainer.height());
-    });
-    // create an instance of the class
-    myInstance = new MyClass(VALUE1, VALUE2);
-
-    var centerHorz = windowWidth / 2;
-    var centerVert = windowHeight / 2;
+    createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
+  song.play();
+  fft = new p5.FFT();
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    background(220);    
-    // call a method on the instance
-    myInstance.myMethod();
-
-    // Put drawings here
-    var centerHorz = canvasContainer.width() / 2 - 125;
-    var centerVert = canvasContainer.height() / 2 - 125;
-    fill(234, 31, 81);
-    noStroke();
-    rect(centerHorz, centerVert, 250, 250);
-    fill(255);
-    textStyle(BOLD);
-    textSize(140);
-    text("p5*", centerHorz + 10, centerVert + 200);
+    background(0);
+    stroke(255);
+    strokeWeight(3);
+    noFill();
+  
+    translate(width / 2, height / 2);
+  
+    let wave = fft.waveform();
+    for (let t = -1; t <= 1; t += 2) {
+      beginShape();
+      for (let i = 0; i <= 180; i += 0.5) {
+        
+        let index = floor(map(i, 0, 180, 0, wave.length - 1));
+  
+        let r = map(wave[index], -1, 1, 150, 350);
+  
+        let x = r * sin(i) * t;
+        let y = r * cos(i);
+        vertex(x, y);
+      }
+      endShape();
+    }
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
-function mousePressed() {
-    // code to run when mouse is pressed
-}
+function mouseClicked() {
+    if (song.isPlaying()) {
+      song.pause();
+      noLoop();
+    } else {
+      song.play();
+      loop();
+    }
+  }
+  
