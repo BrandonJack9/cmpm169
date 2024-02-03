@@ -27,6 +27,8 @@ class MyClass {
 
 let song;
 let fft;
+let hu = 0;
+let r;
 
 function preload() {
 	//Music by ItsWatR from Pixabay
@@ -53,8 +55,8 @@ function setup() {
 
 function draw() {
   background(0);
-  stroke(255);
-  strokeWeight(3);
+  //stroke(255);
+  strokeWeight(10);
   noFill();
 
   translate(width / 2, height / 2);
@@ -63,7 +65,7 @@ function draw() {
   for (let t = -1; t <= 1; t += 2) {
     beginShape();
     for (let i = 0; i <= 180; i += 0.5) {
-      //180 metade de um circulo
+      
       let index = floor(map(i, 0, 180, 0, wave.length - 1));
 
       let r = map(wave[index], -1, 1, 150, 350);
@@ -74,6 +76,27 @@ function draw() {
     }
     endShape();
   }
+  for (let t = -1; t <= 1; t += 2) {
+    stroke((85+hu)%255, 200, 255);
+    beginShape();
+    for (let i = 0; i <= 180; i += 0.5) {
+  
+    let index = floor(map(i, 0, 180, 0, wave.length - 1));
+
+    r = map(wave[index], -1, 1, 100, 300);
+
+    let x = r * sin(i) * t;
+    let y = r * cos(i);
+    vertex(x, y);
+    }
+    endShape();
+    }
+    fill((170+hu)%255, 200, 255);
+    noStroke();
+    ellipse(0, 0, r);
+    ellipse(0, r, 0);
+    ellipse(r, 0, 0);
+    hu++;
  
   
 };
