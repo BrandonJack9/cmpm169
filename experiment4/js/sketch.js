@@ -49,6 +49,7 @@ function setup() {
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
     angleMode(DEGREES);
+    colorMode(HSB, 255);
     song.play();
     fft = new p5.FFT();
 }
