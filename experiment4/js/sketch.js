@@ -28,7 +28,7 @@ class MyClass {
 let song;
 
 function preload() {
-  song = loadSound('Ever_Flowing.mp3');
+  song = loadSound('/Ever_Flowing.mp3');
 }
 
 function setup() {
