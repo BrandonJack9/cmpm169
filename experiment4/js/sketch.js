@@ -34,10 +34,21 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES);
-  song.play();
-  fft = new p5.FFT();
+    canvasContainer = $("#canvas-container");
+    let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+    canvas.parent("canvas-container");
+    $(window).resize(function() {
+        console.log("Resizing...");
+        resizeCanvas(canvasContainer.width(), canvasContainer.height());
+    });
+    // create an instance of the class
+    myInstance = new MyClass(VALUE1, VALUE2);
+
+    var centerHorz = windowWidth / 2;
+    var centerVert = windowHeight / 2;
+    angleMode(DEGREES);
+    song.play();
+    fft = new p5.FFT();
 }
 
 function draw() {
