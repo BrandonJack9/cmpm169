@@ -26,55 +26,26 @@ class MyClass {
 }
 
 let song;
-let fft;
 
 function preload() {
-	//Music by ItsWatR from Pixabay
-  song = loadSound("./Ever_Flowing.mp3");
+  song = loadSound('Ever_Flowing.mp3');
 }
 
-// setup() function is called once when the program starts
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES);
-  song.play();
-  fft = new p5.FFT();
+  createCanvas(710, 200);
+  song.loop(); // song is ready to play during setup() because it was loaded during preload
+  background(0, 255, 0);
 }
 
-// draw() function is called repeatedly, it's the main animation loop
-function draw() {
-    background(0);
-    stroke(255);
-    strokeWeight(3);
-    noFill();
-  
-    translate(width / 2, height / 2);
-  
-    let wave = fft.waveform();
-    for (let t = -1; t <= 1; t += 2) {
-      beginShape();
-      for (let i = 0; i <= 180; i += 0.5) {
-        
-        let index = floor(map(i, 0, 180, 0, wave.length - 1));
-  
-        let r = map(wave[index], -1, 1, 150, 350);
-  
-        let x = r * sin(i) * t;
-        let y = r * cos(i);
-        vertex(x, y);
-      }
-      endShape();
-    }
-}
-
-// mousePressed() function is called once after every time a mouse button is pressed
-function mouseClicked() {
-    if (song.isPlaying()) {
-      song.pause();
-      noLoop();
-    } else {
-      song.play();
-      loop();
-    }
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.pause(); // .play() will resume from .pause() position
+    background(255, 0, 0);
+  } else {
+    song.play();
+    background(0, 255, 0);
   }
+}
+
   
