@@ -33,6 +33,7 @@ let r;
 function preload() {
 	//Music by ItsWatR from Pixabay
   song = loadSound("js/Ever_Flowing.mp3");
+  shadowImg = loadImage("js/shadow.PNG");
 }
 
 function setup() {
@@ -48,6 +49,7 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
+    imageMode(CENTER);
     angleMode(DEGREES);
     colorMode(HSB, 255);
     song.play();
@@ -56,6 +58,7 @@ function setup() {
 
 function draw() {
   background(0);
+  image(shadowImg, width / 2, height / 2);
   //stroke(255);
   strokeWeight(10);
   noFill();
@@ -111,11 +114,11 @@ function draw() {
     translate(300, 20);
     noStroke();
     ellipse(0, 0, r);
-
+    /*
     fill((90+hu)%255, 200, 255);
     translate(-300, 20);
     noStroke();
-    ellipse(0, 0, r);
+    ellipse(0, 0, r);*/
     hu++;
  
   
