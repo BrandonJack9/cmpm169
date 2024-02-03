@@ -115,10 +115,7 @@ function draw() {
     noStroke();
     ellipse(0, 0, r);
     
-    fill((90+hu)%255, 200, 255);
-    translate(-500, 20);
-    noStroke();
-    ellipse(0, 0, r);
+    
     hu++;
  
   
