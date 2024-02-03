@@ -108,6 +108,7 @@ function draw() {
         endShape();
     }
     fill((90+hu)%255, 0, 255);
+    translate(20, 20);
     noStroke();
     ellipse(0, 0, r);
     hu++;
