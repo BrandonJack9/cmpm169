@@ -69,7 +69,7 @@ function draw() {
       
       let index = floor(map(i, 0, 180, 0, wave.length - 1));
 
-      let r = map(wave[index], -1, 1, 200, 400);
+      let r = map(wave[index], -1, 1, 300, 400);
 
       let x = r * sin(i) * t;
       let y = r * cos(i);
@@ -99,7 +99,7 @@ function draw() {
       
         let index = floor(map(i, 0, 180, 0, wave.length - 1));
     
-        r = map(wave[index], -1, 1, 300, 500);
+        r = map(wave[index], -1, 1, 200, 400);
     
         let x = r * sin(i) * t;
         let y = r * cos(i);
@@ -107,11 +107,9 @@ function draw() {
         }
         endShape();
     }
-    fill((90+hu)%255, 200, 255);
+    fill((90+hu)%255, 0, 255);
     noStroke();
     ellipse(0, 0, r);
-    ellipse(0, r, 0);
-    ellipse(r, 0, 0);
     hu++;
  
   
