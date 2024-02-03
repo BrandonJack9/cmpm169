@@ -30,12 +30,12 @@ let fft;
 
 function preload() {
 	//Music by ItsWatR from Pixabay
-  song = loadSound("Ever_Flowing.mp3");
+  song = loadSound("./Ever_Flowing.mp3");
 }
 
 // setup() function is called once when the program starts
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   song.play();
   fft = new p5.FFT();
