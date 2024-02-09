@@ -45,6 +45,9 @@ function setup() {
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
+    
+    myInstance.myMethod();
+
     background(250);
     let radius = width * 1.5;
 
