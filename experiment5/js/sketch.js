@@ -85,6 +85,9 @@ function draw() {
     scale(.5)
     translate(-35, 50, 15)
     sphere(40);
+
+    translate(-85, 50, 15)
+    model(shadow);
    
 }
 
