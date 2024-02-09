@@ -25,6 +25,13 @@ class MyClass {
     }
 }
 
+let shadow;
+
+function preload() {
+  // Load model with normalise parameter set to true
+  shadow = loadModel("js/shadow.obj", true);
+}
+
 // setup() function is called once when the program starts
 function setup() {
     // place our canvas, making it fit our container
