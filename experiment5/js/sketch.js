@@ -46,19 +46,46 @@ function setup() {
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
     
+       
+    // call a method on the instance
     myInstance.myMethod();
 
+    // Put drawings here
+    
     background(250);
     let radius = width * 1.5;
 
     //drag to move the world.
     orbitControl();
-    
-    normalMaterial();
-    vrotateZ(frameCount * 0.01);
+
+    rotateZ(frameCount * 0.01);
     rotateX(frameCount * 0.01);
     rotateY(frameCount * 0.01);
-    sphere(50);
+    /*translate(0, 0, -10);
+    normalMaterial();
+    box(80);*/
+
+    fill(500, 500, 500)
+    triangle(30, 55, 58, 90, 86, 55);
+    translate(95, 0, -30);
+  
+    fill(250, 120, 0);
+    rotateX(1.55);
+    sphere(40);
+
+ 
+ 
+    fill(500, 0, 500);
+    translate(-35, -50, -20);
+    scale(2);
+    box(80);
+  
+    fill(250, 120, 0);
+    rotateX(.05);
+    scale(.5)
+    translate(-35, 50, 15)
+    sphere(40);
+   
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
