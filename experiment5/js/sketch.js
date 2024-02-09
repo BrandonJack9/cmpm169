@@ -58,13 +58,6 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    rotateZ(frameCount * 0.01);
-    rotateX(frameCount * 0.01);
-    rotateY(frameCount * 0.01);
-    /*translate(0, 0, -10);
-    normalMaterial();
-    box(80);*/
-
     fill(500, 500, 500)
     triangle(30, 55, 58, 90, 86, 55);
     translate(95, 0, -30);
