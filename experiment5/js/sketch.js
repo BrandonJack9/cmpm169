@@ -65,28 +65,6 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    fill(500, 500, 500)
-    triangle(30, 55, 58, 90, 86, 55);
-    translate(95, 0, -30);
-  
-    fill(250, 120, 0);
-    rotateX(1.55);
-    sphere(40);
-
- 
- 
-    fill(500, 0, 500);
-    translate(-35, -50, -20);
-    scale(2);
-    box(80);
-  
-    fill(250, 120, 0);
-    rotateX(.05);
-    scale(.5)
-    translate(-35, 50, 15)
-    sphere(40);
-
-    translate(-85, 50, 15)
     model(shadow);
    
 }
