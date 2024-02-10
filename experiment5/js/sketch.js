@@ -58,8 +58,8 @@ function draw() {
     myInstance.myMethod();
 
     // Put drawings here
-    fill(0);
-    background(250);
+    
+    background(0);
     
     let radius = width * 1.5;
 
