@@ -60,6 +60,9 @@ function draw() {
     // Put drawings here
     
     background(0);
+
+    let locX = mouseX - height / 2;
+    let locY = mouseY - width / 2;
     
     let radius = width * 1.5;
 
@@ -67,8 +70,9 @@ function draw() {
     orbitControl();
 
     spotLight(500, 0, 500, 75, 0, 250, 0, 0, -1);
+    pointLight(500, 350, 0, locX, locY, 250);
 
-    rotateZ(1.57);
+    rotateZ(3.14);
     fill(500, 0, 500);
     model(shadow);
    
