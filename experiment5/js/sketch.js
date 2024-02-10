@@ -66,7 +66,7 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    rotateZ(3300);
+    rotateZ(3000);
     fill(500, 0, 500);
     model(shadow);
    
