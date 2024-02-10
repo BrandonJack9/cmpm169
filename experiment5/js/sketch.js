@@ -76,9 +76,9 @@ function draw() {
     spotLight(500, 0, 500, -50, -30, 250, 0, 0, -1);
     pointLight(500, 350, 250, locX, locY, 250);
 
-    texture(mytexture);
+    //texture(mytexture);
     rotateZ(3.14);
-    //fill(500, 0, 500);
+    fill(500, 0, 500);
     model(shadow);
     
    
