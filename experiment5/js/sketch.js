@@ -26,10 +26,13 @@ class MyClass {
 }
 
 let shadow;
+let texture;
 
 function preload() {
   // Load model with normalise parameter set to true
   shadow = loadModel("js/shadow.obj", true);
+  texture = loadImage("js/texture.png");
+  textureMode(NORMAL);
 }
 
 // setup() function is called once when the program starts
@@ -73,7 +76,8 @@ function draw() {
     pointLight(500, 350, 0, locX, locY, 250);
 
     rotateZ(3.14);
-    fill(500, 0, 500);
+    //fill(500, 0, 500);
+    texture(texture);
     model(shadow);
    
 }
