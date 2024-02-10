@@ -72,8 +72,9 @@ function draw() {
     //drag to move the world.
     orbitControl();
 
-    spotLight(500, 0, 500, 75, 0, 250, 0, 0, -1);
-    pointLight(500, 350, 0, locX, locY, 250);
+    spotLight(500, 0, 500, 50, -30, 250, 0, 0, -1);
+    spotLight(500, 0, 500, -50, -30, 250, 0, 0, -1);
+    pointLight(500, 350, 250, locX, locY, 250);
 
     rotateZ(3.14);
     //fill(500, 0, 500);
