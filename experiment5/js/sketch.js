@@ -58,8 +58,9 @@ function draw() {
     myInstance.myMethod();
 
     // Put drawings here
-    
+    fill(0);
     background(250);
+    
     let radius = width * 1.5;
 
     //drag to move the world.
