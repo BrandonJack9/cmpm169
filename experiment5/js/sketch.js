@@ -75,8 +75,8 @@ function draw() {
     spotLight(500, 0, 500, 50, -30, 250, 0, 0, -1);
     spotLight(500, 0, 500, -50, -30, 250, 0, 0, -1);
     spotLight(800, 0, 0, 0, 50, 250, 0, 0, -1);
-    spotLight(800, 600, 0, 0, 0, 100, 0, 0, -1);
-    spotLight(800, 600, 0, 0, 0, 100, 0, 0, -1);
+    spotLight(800, 600, 0, 0, 0, 450, 0, 0, -1);
+    spotLight(800, 600, 0, 0, 0, 350, 0, 0, -1);
     pointLight(350, 350, 350, locX, locY, 250);
 
     //texture(mytexture);
