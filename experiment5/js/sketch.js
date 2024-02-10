@@ -78,7 +78,7 @@ function draw() {
     spotLight(800, 600, 0, 0, 0, 450, 0, 0, -1);
     spotLight(800, 600, 0, 0, 0, 350, 0, 0, -1);
     pointLight(350, 350, 350, locX, locY, 250);
-
+    emissiveMaterial(0, 150, 0);
     //texture(mytexture);
     rotateZ(3.14);
     fill(500, 0, 500);
