@@ -26,13 +26,7 @@ class MyClass {
 }
 
 // setup() function is called once when the program starts
-let a;
-let b;
-let song;
-
-function preload(){
-    song = loadSound("js/starwarsintro.mp3");
-}
+let a, b;
 
 function setup() {
     // place our canvas, making it fit our container
@@ -49,15 +43,14 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
-    
-    song.play();
+
     a = canvasContainer.height();
     b = canvasContainer.height() + 70;
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-  background(0);
+    background(0);
   textSize(100);
   fill(500, 300, 0);
   textAlign(CENTER);
