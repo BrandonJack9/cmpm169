@@ -32,7 +32,7 @@ let b;
 
 
 function preload() {
-    song = loadSound("Ever_Flowing.mp3");
+    song = loadSound("song.mp3");
   }
 
 function setup() {
