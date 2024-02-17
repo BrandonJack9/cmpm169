@@ -26,10 +26,9 @@ class MyClass {
 }
 
 // setup() function is called once when the program starts
-let song;
 let a;
 let b;
-
+let song;
 
 function preload(){
     song = loadSound("js/starwarsintro.mp3");
@@ -69,14 +68,9 @@ function draw() {
   
   a = a - 0.5;
   b = b - 0.5;
-};
+}
 
-function mouseClicked() {
-    if (song.isPlaying()) {
-      song.pause();
-      noLoop();
-    } else {
-      song.play();
-      loop();
-    }
-  }
+// mousePressed() function is called once after every time a mouse button is pressed
+function mousePressed() {
+    // code to run when mouse is pressed
+}
