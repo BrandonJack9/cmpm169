@@ -32,7 +32,7 @@ let b;
 
 
 function preload() {
-    song = loadSound('song.mp3');
+    song = loadSound('starwarsintro.mp3');
   }
 
 function setup() {
