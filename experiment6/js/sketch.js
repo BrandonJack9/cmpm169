@@ -31,9 +31,9 @@ let a;
 let b;
 
 
-function preload() {
-    song = loadSound('starwarsintro.mp3');
-  }
+function preload(){
+    song = loadSound("js/Ever_Flowing.mp3");
+}
 
 function setup() {
     // place our canvas, making it fit our container
@@ -50,7 +50,6 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
-    
     
     song.play();
     a = canvasContainer.height();
