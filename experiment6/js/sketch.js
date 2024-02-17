@@ -30,7 +30,7 @@ let a, b;
 let track;
 
 function preload(){
-    track = loadSound("js/song.mp3");
+    track = loadSound("js/SW_song.mp3");
 }
 
 function setup() {
