@@ -68,6 +68,12 @@ function setup() {
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
   background(0);
+  
+  for (let i = 0; i < 100; i++) {
+    fill(500);
+    square(r1[i], r2[i], 4, 20);
+  }
+  
   textSize(100);
   fill(500, 300, 0);
   textAlign(CENTER);
@@ -79,10 +85,7 @@ function draw() {
   a = a - 0.5;
   b = b - 0.5;
 
-  for (let i = 0; i < 100; i++) {
-    fill(500);
-    square(r1[i], r2[i], 4, 20);
-  }
+  
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
