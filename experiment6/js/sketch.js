@@ -27,11 +27,6 @@ class MyClass {
 
 // setup() function is called once when the program starts
 let a, b;
-let song;
-
-function preload(){
-    song = loadSound("js/starwarsintro.mp3");
-}
 
 function setup() {
     // place our canvas, making it fit our container
@@ -48,7 +43,7 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
-    song.play();
+
     a = canvasContainer.height();
     b = canvasContainer.height() + 70;
 }
