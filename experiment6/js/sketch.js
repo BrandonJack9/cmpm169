@@ -62,7 +62,7 @@ function draw() {
   text('Experiment 6\n', canvasContainer.width() / 2, a);
   
   textSize(50);
-  text('A long time ago (this morning)\n at Family Student Housing\n I really didnt wanna go to class\n I was feeling super stressed\n Because I spent the last two\n days basically doing nothing\n I was feeling super lazy\n and wanted to just stay in bed\n so I did and now I feel\n even more behind\n if I continute to do this\n I might not get\n good grades\n a power struggle\n within me has been\n raging for years now,\n part of me really wants\n to get good grades\n but the other part\n of me wants to stay in bed\n as this war drags on inside me\n the forces of sleepiness\n continue to grow stronger\n I fear it may be too late\n for me to change my sleeping habits\n but I must continue on the path\n to self improvement', canvasContainer.width()/2, b);
+  text('A long time ago (this morning)\n at Family Student Housing\n I really didnt wanna go to class,\n I was already pretty stressed\n because I spent the last two\n days basically doing nothing.\n I was feeling super lazy\n and wanted to just stay in bed,\n so I did.\n Now I feel even more behind.\n If I continute to do this,\n I might not get good grades.\n A power struggle\n within me has been\n raging for years now;\n part of me really wants\n to get good grades\n but the other part\n of me wants to stay in bed.\n As this war drags on inside me,\n the forces of sleepiness\n continue to grow stronger.\n I fear it may be too late\n for me to change my sleeping habits,\n but I must continue on the path\n to self improvement', canvasContainer.width()/2, b);
   
   a = a - 0.5;
   b = b - 0.5;
