@@ -26,8 +26,9 @@ class MyClass {
 }
 
 // setup() function is called once when the program starts
-let a, b;
 let song;
+let a, b;
+
 
 function preload(){
     song = loadSound("js/starwarsintro.mp3");
@@ -48,14 +49,16 @@ function setup() {
 
     var centerHorz = windowWidth / 2;
     var centerVert = windowHeight / 2;
+    
     song.play();
+    
     a = canvasContainer.height();
     b = canvasContainer.height() + 70;
 }
 
 // draw() function is called repeatedly, it's the main animation loop
 function draw() {
-    background(0);
+  background(0);
   textSize(100);
   fill(500, 300, 0);
   textAlign(CENTER);
@@ -70,5 +73,10 @@ function draw() {
 
 // mousePressed() function is called once after every time a mouse button is pressed
 function mousePressed() {
-    // code to run when mouse is pressed
+    if (song.isPlaying()) {
+        song.pause();
+        noLoop();
+      } else {
+        song.play();
+      }
 }
