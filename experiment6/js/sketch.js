@@ -28,6 +28,8 @@ class MyClass {
 // setup() function is called once when the program starts
 let a, b;
 let track;
+let r1;
+let r2;
 
 function preload(){
     track = loadSound("js/SW_song.mp3");
@@ -53,6 +55,14 @@ function setup() {
 
     a = canvasContainer.height();
     b = canvasContainer.height() + 70;
+
+    r1 = [];
+    r2 = [];
+  
+   for (let i = 0; i < 100; i++) {
+    r1[i] = random(canvasContainer.width());
+    r2[i] = random(canvasContainer.height());
+  }
 }
 
 // draw() function is called repeatedly, it's the main animation loop
@@ -68,6 +78,11 @@ function draw() {
   
   a = a - 0.5;
   b = b - 0.5;
+
+  for (let i = 0; i < 100; i++) {
+    fill(500);
+    square(r1[i], r2[i], 4, 20);
+  }
 }
 
 // mousePressed() function is called once after every time a mouse button is pressed
